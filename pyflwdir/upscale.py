@@ -1335,7 +1335,7 @@ def upscale_error(subidxs_out, idxs_ds, subidxs_ds, mv=_mv):
     assert subidxs_out.size == idxs_ds.size
     # binary array with outlets
     subn = subidxs_ds.size
-    outlets = np.zeros(subn, dtype=np.bool_)
+    outlets = np.zeros(shape=subn, dtype=np.bool_)
     for subidx in subidxs_out:
         if subidx == mv:
             continue
