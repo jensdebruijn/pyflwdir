@@ -1368,7 +1368,7 @@ def upscale_check(subidxs_out, idxs_ds, subidxs_ds, minlen=0, mv=_mv):
     # array with outlets (>=0) and streams (-1); nodata value is -9
     assert subidxs_out.size <= 2147483648
     streams = np.full(subidxs_ds.size, -9, dtype=np.int32)
-    valid = np.array([bool(1) for _ in range(idxs_ds.size)])
+    valid = np.ones(idxs_ds.size, dtype=np.bool_)
     for idx in range(subidxs_out.size):
         subidx = subidxs_out[idx]
         if subidx == mv:
